@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CPU sheduling Algorithms</title>
+	<script src="https://www.google.com/jsapi"></script>
+	<script>
+		google.load('jquery', '1.3.1');
+	</script>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	
+</head>
+
+<body style="padding-left: 20px;">
+	<h1 style="text-align: center;color: green;">CPU Sheduling Algorithms</h1>
+	<p>These are set of protocols or rules, by which a process is executed in a specific manner. A typical process involves both I/O time and CPU time. In a uniprogramming system like MS-DOS, time spent waiting for I/O is wasted and CPU is free during this time. In multiprogramming systems, one process can use CPU while another is waiting for I/O. This is possible only with process scheduling.<br/>
+		Some important terms :
+		<ol>
+			<li>Arrival Time:       Time at which the process arrives in the ready queue.</li>
+			<li>Completion Time:    Time at which process completes its execution.</li>
+			<li>Burst Time:         Time required by a process for CPU execution.</li>
+			<li>Turn Around Time:   Time Difference between completion time and arrival time. <br/>         
+     Turn Around Time = Completion Time - Arrival Time</li>
+     <li>Waiting Time(W.T): Time Difference between turn around time and burst time.<br/>
+     Waiting Time = Turn Around Time - Burst Time</li>
+		</ol>
+
+</p>
+	<input type="button" name="addProcess" id='addProcesses' value="Add Process" onclick="indexIncrement();" class="button_styling">
+
+	<form name="processInput" id='processInfoAsk' class="form">
+		<h5>Process Number : <span id='processIndex'></span> </h5>
+		<h4>Burst time : <input type="Number" name="burst_time" /> </h4>
+		<h4>Arrival time : <input type="Number" name="arrival_time" /> </h4>
+		<input type="button" name="" value="Next" onclick="processSubmitted();" id='submitButton' class="button_styling">
+
+
+
+
+
+	</form>
+<script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
